@@ -1,4 +1,4 @@
-require 'pry'
+require 'colorize'
 
 def program
   puts "Enter a word to check if its a palindrome"
@@ -23,9 +23,9 @@ def palindrome(input)
     empty_array << char
   end
   if empty_array.join("") == input.downcase
-    puts "#{@input} is a palindrome!, YES!"
+    puts "#{input} is a palindrome!, YES!".yellow
   else
-    puts "NOPE, #{@input} is NOT a palindrome!"
+    puts "NOPE, #{input} is NOT a palindrome!".red
   end
 end
 
@@ -33,7 +33,7 @@ end
 def multi_word(input)
     words = input.split(" ")
     words.each_with_index do |word, i|
-      puts "Checking word #{i + 1}..."
+      puts "Checking word #{i + 1}...".cyan
       palindrome(word)
     end
 end
