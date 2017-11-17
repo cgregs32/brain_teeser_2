@@ -1,7 +1,10 @@
 require 'colorize'
 
 def program
-  puts "Enter a word to check if its a palindrome"
+  puts "-----------------------------------------".light_green
+  puts "Enter a word to check if its a palindrome".green
+  puts "-----------------------------------------".light_green
+  print "> "
   @input = gets.strip
   if (@input.include?(" "))
     multi_word(@input)
